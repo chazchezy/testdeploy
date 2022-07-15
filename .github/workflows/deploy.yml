@@ -15,5 +15,5 @@ jobs:
       - run: mkdir "$HOME/.ssh"
       - run: echo "${{secrets.key}}" > "$HOME/.ssh/key"
       - run: chmod 600 "$HOME/.ssh/key"
-      - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . its@46.191.224.146:/home/its/test
+      - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . its@46.191.224.146:/home/its/test/
       
